@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: development
-      url:
+      url: "lucasmuniz.com.br"
     needs: build
     steps:
       - name: Repo Checkout
