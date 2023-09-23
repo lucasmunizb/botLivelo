@@ -14,13 +14,13 @@ jobs:
       url:
     needs: build
     steps:
-      - name: Checkout
+      - name: Repo Checkout
         uses: actions/checkout@v1
       - name: Hostinger
         uses: easingthemes/ssh-deploy@main
         with:
           SSH_PRIVATE_KEY: ${{secrets.SERVER_SSH_KEY}}
-          ARGS: "-rlgoDvc" --delete
+          ARGS: "-rlgoDvc --delete"
           SOURCE: "/"
           REMOTE_HOST: ${{vars.REMOTE_HOST}}
           REMOTE_USER: ${{vars.REMOTE_USER}}
