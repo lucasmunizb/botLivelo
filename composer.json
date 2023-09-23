@@ -1,0 +1,21 @@
+{
+    "name": "bot/livelo",
+    "description": "Bot using web scrapping, to get information about programs point Livelo",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Bot\\Livelo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Braga"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "telegram-bot/api": "^2.5",
+        "guzzlehttp/guzzle": "^7.8"
+    }
+}
