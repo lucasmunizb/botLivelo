@@ -16,7 +16,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: development
+      name: Devb
       url: "lucasmuniz.com.br"
     needs: build
     steps:
