@@ -17,11 +17,11 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: Devb
-      url: "lucasmuniz.com.br"
+      url: "https://www.lucasmuniz.com.br"
     needs: build
     steps:
       - name: Repo Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v3
       - name: Hostinger
         uses: easingthemes/ssh-deploy@main
         with:
