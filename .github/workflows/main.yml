@@ -18,7 +18,7 @@ jobs:
     environment:
       name: development
       url: "https://www.lucasmuniz.com.br"
-    needs: builds
+    needs: build
     steps:
       - name: Repo Checkout
         uses: actions/checkout@v1
