@@ -1,4 +1,4 @@
-name: Deploy website
+name: Deploy Website
 on:
   push:
     branches: [main]
@@ -11,14 +11,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: build
+      - name: builds
         run: echo Building
   deploy:
     runs-on: ubuntu-latest
     environment:
-      name: Devb
+      name: development
       url: "https://www.lucasmuniz.com.br"
-    needs: build
+    needs: builds
     steps:
       - name: Repo Checkout
         uses: actions/checkout@v1
