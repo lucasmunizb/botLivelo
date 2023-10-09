@@ -1,4 +1,4 @@
-FROM php:7.4.3-apache
+FROM php:8.2-apache
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php \
@@ -7,3 +7,6 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 RUN apt-get update && \
     apt-get upgrade -y && \
     apt-get install -y git
+
+RUN a2enmod rewrite
+RUN service apache2 restart

@@ -5,7 +5,8 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Bot\\Livelo\\": "src/"
+            "Bot": "src/",
+            "Api": "api/"
         }
     },
     "authors": [
